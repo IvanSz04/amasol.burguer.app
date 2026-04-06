@@ -20,6 +20,9 @@ app.get('/', (req, res) => {
     res.send("El servidor de Amasol está funcionando 🚀");
 });
 
+// Usar las rutas de pedidos
+app.use('/api/pedidos', require('./routes/pedidos'));
+
 // 5. Encender el servidor
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
